@@ -15,15 +15,13 @@ function App() {
         <img src={holbertonLogo} alt="holberton logo"></img>
         <h1 style={{ color: "#e1003c" }}>School Dashboard</h1>
       </div>
-      <div className="App-body">
-        <p>Login to access the full dashboard</p>
-        <label htmlFor='email'>Email</label>
-        <input type='email' id='email'>Email</input>
-
-        <label htmlFor='password'>Password</label>
-        <input type='password' id='password'>Password</input>
-
-        <button type='submit'>OK</button>
+      <div className='App-body'>
+        <p> Login to access the full dashboard</p>
+        <label htmlFor="email">email</label>
+        <input type="email" id="email"></input>
+        <label htmlFor="password">password</label>
+        <input type="password" id="password"></input>
+        <button type="submit">Ok</button>
       </div>
       <div className="App-footer">
         <p>Copyright {getCurrentYear()} - {getFooterCopy(true)}</p>
