@@ -16,8 +16,6 @@ export default function Notifications() {
                 <li dangerouslySetInnerHTML={{ __html: getLatestNotification() }}>
                 </li>
             </ul>
-
-            
             <button style={{ position: "absolute", top: "15px", right: "20px" }} aria-label="Close" onClick={handleClick}>
                 <img style={{ width: "10px", height: "10px" }} src={closeIcon} />
             </button>
