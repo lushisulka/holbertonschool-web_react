@@ -4,11 +4,8 @@ export const getCurrentYear = () => {
 }
 export const getFooterCopy = (isIndex) => {
     if (isIndex) {
-        const str = "<strong>Holberton School</strong>";
-        return <span dangerouslySetInnerHTML={{ __html: str }} />;
+        return "Holberton School";
     } else {
-        const str = "<strong>Holberton School main dashboard</strong>";
-        return <span dangerouslySetInnerHTML={{ __html: str }} />;
+        return "Holberton School main dashboard";
     }
 }
-export default { getCurrentYear, getFooterCopy };

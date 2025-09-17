@@ -2,11 +2,15 @@
 import './App.css'
 import holbertonLogo from './assets/holberton-logo.jpg'
 import { getCurrentYear, getFooterCopy} from "./utils.js"
+import Notifications from "./Notifications.jsx"
 
 function App() {
 
   return (
     <>
+    <div>
+      <Notifications />
+    </div>
       <div className="App-header">
         <img src={holbertonLogo} alt="holberton logo"></img>
         <h1 style={{ color: "#e1003c" }}>School Dashboard</h1>
