@@ -1,22 +1,29 @@
-import { render, screen } from "@testing-library/react";
-import App from "./App";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import App from './App';
 
-test("renders App form correctly", () => {
-    render(<App />);
+describe('App Sign In Form', () => {
+    test('renders 2 input elements (email and password)', () => {
+        render(<App />);
+        const emailInput = screen.getByLabelText(/email/i);
+        const passwordInput = screen.getByLabelText(/password/i);
 
-    // ✅ Input fields
-    const emailInput = screen.getByLabelText(/email/i);
-    const passwordInput = screen.getByLabelText(/password/i);
-    expect(emailInput).toBeInTheDocument();
-    expect(passwordInput).toBeInTheDocument();
+        expect(emailInput).toBeInTheDocument();
+        expect(passwordInput).toBeInTheDocument();
+    });
 
-    // ✅ Labels
-    const emailLabel = screen.getByText(/email/i);
-    const passwordLabel = screen.getByText(/password/i);
-    expect(emailLabel).toBeInTheDocument();
-    expect(passwordLabel).toBeInTheDocument();
+    test('renders 2 label elements with the text Email and Password', () => {
+        render(<App />);
+        const emailLabel = screen.getByText(/email/i);
+        const passwordLabel = screen.getByText(/password/i);
 
-    // ✅ Button
-    const button = screen.getByRole("button", { name: /ok/i });
-    expect(button).toBeInTheDocument();
+        expect(emailLabel).toBeInTheDocument();
+        expect(passwordLabel).toBeInTheDocument();
+    });
+
+    test('renders a button with the text OK', () => {
+        render(<App />);
+        const button = screen.getByRole('button', { name: /ok/i });
+        expect(button).toBeInTheDocument();
+    });
 });
