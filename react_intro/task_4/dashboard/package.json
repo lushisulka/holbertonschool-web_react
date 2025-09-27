@@ -1,5 +1,6 @@
 {
   "name": "dashboard",
+  "homepage": "https://lushisulka.github.io/holbertonschool-web_react/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +9,9 @@
     "test": "jest",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@babel/preset-env": "^7.28.3",
