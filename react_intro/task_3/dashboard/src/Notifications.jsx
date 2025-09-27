@@ -1,11 +1,11 @@
 import "./Notifications.css";
 import closeIcon from "./assets/close-button.png";
-import { getLatestNotification } from "./utils"
+import { getLatestNotification } from "./utils";
 
-export default function Notifications() {
+function Notifications() {
 
     const handleClick = () => {
-        console.log("Close button has been clicked")
+        console.log("Close button has been clicked");
     }
 
     return (
@@ -20,7 +20,8 @@ export default function Notifications() {
             <button style={{ position: "absolute", top: "15px", right: "20px" }} aria-label="Close" onClick={handleClick}>
                 <img style={{ width: "10px", height: "10px" }} src={closeIcon} />
             </button>
-        </div>
+        </div >
     )
-
 }
+
+export default Notifications;
