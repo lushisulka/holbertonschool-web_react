@@ -14,14 +14,17 @@ function Notifications() {
             <ul>
                 <li data-priority="default">New course available</li>
                 <li data-priority="urgent">New resume available</li>
-                <li dangerouslySetInnerHTML={{ __html: getLatestNotification() }}>
-                </li>
+                <li data-priority="urgent" dangerouslySetInnerHTML={{ __html: getLatestNotification() }}></li>
             </ul>
-            <button style={{ position: "absolute", top: "15px", right: "20px" }} aria-label="Close" onClick={handleClick}>
-                <img style={{ width: "10px", height: "10px" }} src={closeIcon} />
+            <button
+                style={{ position: "absolute", top: "15px", right: "20px" }}
+                aria-label="Close"
+                onClick={handleClick}
+            >
+                <img style={{ width: "10px", height: "10px" }} src={closeIcon} alt="close icon" />
             </button>
-        </div >
-    )
+        </div>
+    );
 }
 
 export default Notifications;

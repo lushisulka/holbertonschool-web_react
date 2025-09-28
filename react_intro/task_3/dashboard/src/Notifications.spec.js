@@ -1,10 +1,13 @@
+import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import Notifications from "./Notifications";
 
 describe("Notifications component", () => {
+
     test("renders the notifications title", () => {
         render(<Notifications />);
-        const title = screen.getByText(/here is the list of notifications/i)
+        const title = screen.getByText(/here is the list of notifications/i);
         expect(title).toBeInTheDocument();
     });
 
@@ -28,4 +31,5 @@ describe("Notifications component", () => {
         expect(logSpy).toHaveBeenCalledWith("Close button has been clicked");
         logSpy.mockRestore();
     });
+
 });
