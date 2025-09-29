@@ -1,8 +1,10 @@
-import React, { Fragment } from 'react';
-import Notifications from '../Notifications/Notifications';
-import Header from '../Header/Header';
-import Login from '../Login/Login';
-import Footer from '../Footer/Footer';
+// App.jsx
+import './App.css';
+import { Fragment } from 'react';
+import Notifications from "../Notifications/Notifications.jsx";
+import Header from '../Header/Header.jsx';
+import Login from '../Login/Login.jsx';
+import Footer from '../Footer/Footer.jsx';
 
 function App() {
   const notificationsList = [
@@ -14,9 +16,11 @@ function App() {
   return (
     <Fragment>
       <Notifications notifications={notificationsList} />
-      <Header />
-      <Login />
-      <Footer />
+      <div className="App">
+        <Header />
+        <Login />
+        <Footer />
+      </div>
     </Fragment>
   );
 }
