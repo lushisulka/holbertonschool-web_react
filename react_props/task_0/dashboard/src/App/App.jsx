@@ -16,11 +16,11 @@ function App() {
   return (
     <Fragment>
       <Notifications notifications={notificationsList} />
-    
+      <div className="App">
         <Header />
         <Login />
         <Footer />
-     
+      </div>
     </Fragment>
   );
 }
